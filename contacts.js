@@ -2,7 +2,7 @@ const { readFile, writeFile } = require("fs/promises")
 const path = require("path")
 const { v4: uuidv4 } = require("uuid")
 
-const contactsPath = path.join(__dirname, "/db/contacts.json")
+const contactsPath = path.join(__dirname, "db", "contacts.json")
 
 async function listContacts() {
   const res = await readFile(contactsPath, "utf8")
