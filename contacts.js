@@ -46,7 +46,7 @@ async function addContact(name, email, phone) {
 
   contacts.push(createdObj)
 
-  await writeFile(contactsPath, JSON.stringify(contacts))
+  await writeFile(contactsPath, JSON.stringify(contacts, null, 2))
 
   return createdObj
 }
