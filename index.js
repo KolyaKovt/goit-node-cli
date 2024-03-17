@@ -21,7 +21,7 @@ const options = program.opts()
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      console.log(await listContacts())
+      console.table(await listContacts())
       break
 
     case "get":
